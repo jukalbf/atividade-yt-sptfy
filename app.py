@@ -2,6 +2,8 @@ from dotenv import load_dotenv
 import os
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+import json
+from pprint import pprint
 
 load_dotenv()
 
@@ -14,6 +16,6 @@ artist = "https://open.spotify.com/artist/3YQKmKGau1PzlVlkL1iodx?si=G12ImuQzQjyS
 
 result = sp.artist_albums(artist_id=artist, album_type="album")
 
-# album = result.
+pprint(result["items"][0]["name"])
 
-print(result)
+# album = result.
